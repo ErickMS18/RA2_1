@@ -137,7 +137,7 @@ venderItem horario id qtd (Inventario mapa)
 inventarioInicial :: Inventario
 inventarioInicial = Inventario (Map.fromList
     [ ("001", Item "001" "batata_frita" 10 "comida")
-    , ("002", Item "002" "yoyo" 25 "brinquedo")
+    , ("002", Item "002" "ioio" 25 "brinquedo")
     , ("003", Item "003" "suco_de_goiaba" 5 "bebida")
     , ("004", Item "004" "chocolate_quente" 12 "bebida")
     , ("005", Item "005" "pudim" 8 "comida")
@@ -223,7 +223,7 @@ itemMaisMovimentado logs =
                 -- foldr1 reduz a lista a um único elemento usando uma função, começando da direita, sem necessidade de especificar um elemento de início
                 -- No caso, seleciona a tupla cujo segundo elemento (indicado por "snd") é maior, até que encontra a tupla com o maior valor
                 -- Ao final, guarda a chave (nome do item) e descarta o valor
-                -- Como ele começa da direita, caso tenha um empate, ele guardará o item cujo nome vem depois em ordem alfabética (por isso para o inventário inicial sempre será o yoyo)
+                -- Como ele começa da direita, caso tenha um empate, ele guardará o item cujo nome vem depois em ordem alfabética
                 (itemMax, _) = foldr1 (\x y -> if snd x > snd y then x else y) lista
             in Just itemMax
             
