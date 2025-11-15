@@ -62,55 +62,55 @@ Seguem abaixo os testes feitos conforme a especificação.
 ## Cenário 1: Persistência de Estado (Sucesso)
 
 ### Passo 1: Iniciar o programa (sem arquivos de dados).
-![iniciando o programa sem arquivos](./imagens/teste1-1.png)
+![iniciando o programa sem arquivos](./imagens/teste1-1.PNG)
 
 Na barra no topo da tela, pode-se ver que só existe o arquivo `main.hs`.
 
 ### Passo 2: Adicionar 3 itens.
-![adicionando 3 itens](./imagens/teste1-2.png)
+![adicionando 3 itens](./imagens/teste1-2.PNG)
 
 Adicionamos os itens `molho_de_tomate`, `mouse`, e `oculos`.
 
 ### Passo 3: Fechar o programa.
-![fechando o programa](./imagens/teste1-3.png)
+![fechando o programa](./imagens/teste1-3.PNG)
 
 Os arquivos `Inventario.dat` e `Auditoria.log` aparecem ao lado do `main.hs`.
 
 ### Passo 4: Verificar se os arquivos Inventario.dat e Auditoria.log foram criados.
-![verificando Inventario.dat](./imagens/teste1-4-1.png)
-![verificando Auditoria.log](./imagens/teste1-4-2.png)
+![verificando Inventario.dat](./imagens/teste1-4-1.PNG)
+![verificando Auditoria.log](./imagens/teste1-4-2.PNG)
 
 Os arquivos contém os dados iniciais do inventário gerados automaticamente, assim como os 3 itens adicionados pelo usuário.
 
 ### Passo 5: Reiniciar o programa.
-![reiniciando o programa](./imagens/teste1-5.png)
+![reiniciando o programa](./imagens/teste1-5.PNG)
 
 ### Passo 6: Executar um comando de "listar" (a ser criado) ou verificar se o estado carregado em memória contém os 3 itens.
-![comando listar](./imagens/teste1-6.png)
+![comando listar](./imagens/teste1-6.PNG)
 
 Todos os novos itens aparecem na lista.
 
 ## Cenário 2: Erro de Lógica (Estoque Insuficiente)
 
 ### Passo 1: Adicionar um item com 10 unidades (ex: "teclado").
-![adicionando um item com 10 uniddades](./imagens/teste2-1.png)
+![adicionando um item com 10 uniddades](./imagens/teste2-1.PNG)
 
 ### Passo 2: Tentar remover 15 unidades desse item. Verificar se o programa exibiu uma mensagem de erro clara.
-![tentativa de remover 15 unidades do item](./imagens/teste2-2.png)
+![tentativa de remover 15 unidades do item](./imagens/teste2-2.PNG)
 
 Ao tentar vender 15 unidades, aparece a mensagem "ERRO: estoque insuficiente para venda."
 
 ### Passo 3: Verificar se o Inventario.dat (e o estado em memória) ainda mostra 10 unidades.
-![comando listar mostrando 10 unidades](./imagens/teste2-3-1.png)
+![comando listar mostrando 10 unidades](./imagens/teste2-3-1.PNG)
 
 O estado em memória mostra 10 unidades.
 
-![Inventario.dat mostrando 10 unidades](./imagens/teste2-3-2.png)
+![Inventario.dat mostrando 10 unidades](./imagens/teste2-3-2.PNG)
 
 O último item "teclado" continua tendo uma quantidade igual a 10.
 
 ### Passo 4: Verificar se o Auditoria.log contém uma LogEntry com StatusLog (Falha ...).
-![Auditoria.log com uma LogEntry com StatusLog Falha](./imagens/teste2-4.png)
+![Auditoria.log com uma LogEntry com StatusLog Falha](./imagens/teste2-4.PNG)
 
 A última linha mostra o erro com status igual a "Falha".
 
@@ -118,7 +118,7 @@ A última linha mostra o erro com status igual a "Falha".
 ## Cenário 3: Geração de Relatório de Erros
 
 ### Após executar o Cenário 2, executar o comando report. Verificar se o relatório gerado (especificamente pela função logsDeErro) exibe a entrada de log referente à falha registrada no Cenário 2 (a tentativa de remover estoque insuficiente).
-![comando report](./imagens/teste3.png)
+![comando report](./imagens/teste3.PNG)
 
 O erro aparece ambos na seção de logs de erro e na seção do histórico do item.
 
