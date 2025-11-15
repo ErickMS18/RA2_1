@@ -120,7 +120,7 @@ A última linha mostra o erro com status igual a "Falha".
 ### Após executar o Cenário 2, executar o comando report. Verificar se o relatório gerado (especificamente pela função logsDeErro) exibe a entrada de log referente à falha registrada no Cenário 2 (a tentativa de remover estoque insuficiente).
 ![comando report](./imagens/teste3.PNG)
 
-O erro aparece ambos na seção de logs de erro e na seção do histórico do item.
+O erro aparece tanto na seção de logs de erro quanto na seção do histórico do item.
 
 
 
