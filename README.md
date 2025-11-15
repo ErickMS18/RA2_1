@@ -10,6 +10,8 @@ Alunos:
 - Christine von Schmalz (usuário: [cvschmalz](https://github.com/cvschmalz))
 - Erick Maestri de Souza (usuário: [ErickMS18](https://github.com/ErickMS18))
 
+Grupo: RA2 1
+
 ## Descrição do Projeto
 
 Este projeto implementa um sistema de inventário em Haskell, que permite:
